@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# build output
+_site
+_redirects
+
+# logs
+*.log
+
+# IntelliJ based IDEs
+.idea
+
+# Finder (MacOS) folder config
+.DS_Store

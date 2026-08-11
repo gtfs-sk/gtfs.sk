@@ -1,0 +1,12 @@
+{
+  "name": "gtfs.sk",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "node scripts/generate-redirects.js && npx @11ty/eleventy",
+    "start": "node scripts/generate-redirects.js && npx @11ty/eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

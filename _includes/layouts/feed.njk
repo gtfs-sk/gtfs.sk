@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+---
+{% set feedMeta = feeds | findFeed(slug) %}
+<article class="feed-page">
+  <a class="back-link" href="/#feedy">← Späť na feedy</a>
+  <span class="badge">{{ feedMeta.route_type }}</span>
+  <span class="badge badge-format">{{ feedMeta | formatLabel }}</span>
+  <h1>{{ feedMeta.name or slug }}</h1>
+  <dl class="feed-meta-table">
+    <dt>Región</dt>
+    <dd>{{ feedMeta.region }}</dd>
+    <dt>Spravuje</dt>
+    <dd>{{ feedMeta.maintained_by }}</dd>
+    <dt>Upravujeme dáta</dt>
+    <dd>{% if feedMeta.modified %}Áno — obohacujeme alebo čistíme zdrojové dáta{% else %}Nie — publikujeme bez úprav{% endif %}</dd>
+    <dt>Licencia</dt>
+    <dd>{{ feedMeta.license or "nešpecifikovaná" }}</dd>
+    <dt>Stav</dt>
+    <dd>{{ feedMeta.status }}</dd>
+    <dt>Posledná aktualizácia</dt>
+    <dd>{{ feedMeta.last_updated }}</dd>
+    <dt>Oficiálny zdroj</dt>
+    <dd>{% if feedMeta.official_url %}<a href="{{ feedMeta.official_url }}">{{ feedMeta.official_url }}</a>{% else %}nie je verejne dostupný{% endif %}</dd>
+    <dt>GitHub repozitár</dt>
+    <dd>{% if feedMeta.github_repo %}<a href="{{ feedMeta.github_repo }}">{{ feedMeta.github_repo }}</a>{% else %}nie je k dispozícii{% endif %}</dd>
+  </dl>
+  <div class="feed-body">
+    {{ content | safe }}
+  </div>
+</article>

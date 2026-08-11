@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "gtfs.sk" }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="scroll-header" id="scroll-header">
+    <div class="scroll-header-inner">
+      <a href="/" class="site-title"><img class="site-logo site-logo-white" src="/assets/logo-line.svg" alt="gtfs.sk"></a>
+      <nav class="site-nav">
+        <a href="/#feedy">Dáta</a>
+        <a href="/guide/">Návod</a>
+        <a href="https://github.com/gtfs-sk">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-top">
+      <p>© 2026 gtfs.sk</p>
+      <a href="mailto:feed_info@gtfs.sk">feed_info@gtfs.sk</a>
+    </div>
+    <div class="site-footer-logo">
+      <img class="site-logo" src="/assets/logo-line.svg" alt="gtfs.sk">
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var header = document.getElementById("scroll-header");
+      function toggle() {
+        header.classList.toggle("is-visible", window.scrollY > 120);
+      }
+      document.addEventListener("scroll", toggle, { passive: true });
+      toggle();
+    })();
+  </script>
+</body>
+</html>
