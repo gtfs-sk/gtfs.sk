@@ -88,20 +88,5 @@
     "route_type": "rail",
     "status": "draft",
     "last_updated": "2026-08-10"
-  },
-  {
-    "slug": "bikeshare-bratislava",
-    "name": "Zdieľané bicykle Bratislava",
-    "region": "Bratislavský kraj",
-    "format": "GBFS",
-    "source_format": null,
-    "official_url": "https://opendata.example.com/bikeshare-ba/gbfs.json",
-    "github_repo": null,
-    "maintained_by": "Prevádzkovateľ bikeshare systému",
-    "modified": false,
-    "license": "CC-BY-4.0",
-    "route_type": "other",
-    "status": "published",
-    "last_updated": "2026-08-05"
   }
 ]
