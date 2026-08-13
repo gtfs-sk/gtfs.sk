@@ -58,21 +58,12 @@ main {
 /* scroll header */
 
 .scroll-header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 50;
-  padding: 1.5rem 1.5rem 4rem;
-  background: linear-gradient(180deg, var(--color-accent) 0%, rgba(102, 218, 121, 0) 100%);
-  transform: translateY(-100%);
-  transition: transform 0.25s ease;
-  pointer-events: none;
-}
-
-.scroll-header.is-visible {
-  transform: translateY(0);
-  pointer-events: auto;
+  padding: 1.5rem 1.5rem;
+  background: var(--color-text);
+  border-bottom: 2px solid var(--color-accent);
 }
 
 .scroll-header-inner {
@@ -104,10 +95,12 @@ main {
   text-decoration: none;
   font-size: 0.9375rem;
   font-weight: 700;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
 }
 
 .site-nav a:hover {
-  opacity: 0.75;
+  border-bottom-color: var(--color-accent);
 }
 
 /* buttons */
@@ -269,7 +262,7 @@ main {
 
 .back-link {
   display: inline-block;
-  margin: 6rem 0 1.5rem;
+  margin: 2.5rem 0 1.5rem;
   color: var(--color-muted);
   text-decoration: none;
   font-size: 0.9375rem;
@@ -283,6 +276,12 @@ main {
 .feed-page h1 {
   font-size: 2.5rem;
   margin: 1rem 0 1.5rem;
+}
+
+.feed-page {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feed-meta-table {
@@ -338,11 +337,48 @@ main {
 main > h1:first-child {
   font-size: 2.5rem;
   max-width: var(--content-width);
-  margin-top: 6rem;
+  margin: 2.5rem auto 0;
 }
 
-main > p, main > ol, main > ul {
+main > h2,
+main > h3,
+main > p,
+main > ol,
+main > ul {
   max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main > ul, main > ol {
+  padding-left: 1.5rem;
+}
+
+/* code blocks */
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  overflow-wrap: anywhere;
+}
+
+main pre {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* footer */
@@ -370,13 +406,43 @@ main > p, main > ol, main > ul {
 }
 
 .site-footer-logo {
-  overflow: hidden;
-  height: clamp(3rem, 8vw, 6rem);
+  display: flex;
+  justify-content: center;
   padding: 0 1.5rem;
 }
 
 .site-footer-logo img {
-  width: min(100%, 50rem);
-  height: auto;
+  width: auto;
+  height: clamp(3rem, 8vw, 6rem);
   display: block;
+}
+
+@media (max-width: 48rem) {
+  .scroll-header {
+    padding: 1rem 1rem;
+  }
+
+  .scroll-header-inner {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+
+  .site-title .site-logo {
+    height: 1.25rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .site-nav a {
+    font-size: 0.8125rem;
+  }
+
+  .site-footer-top {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 2rem 1.5rem 1.5rem;
+  }
 }
