@@ -20,12 +20,12 @@ Keď zverejníte GTFS feed, vaše spoje sa môžu objaviť priamo v aplikáciác
 ## Čo je potrebné?
 
 GTFS feed potrebuje nasledujúce typy dát:
-- polohy zastávok, označníkov zastávok, náštupišta
+- polohy zastávok, označníkov zastávok, náštupišt
 - linky a ich trasy
 - "časy zastávok" (z JDF poznáme ako CASSPOJE)
 
 Ak chcete vaše dáta povzdvihnút dalej, môžete pridať:
-- informácie o gerantovaných prestupoch (transfers.txt)
+- informácie o garantovaných prestupoch (transfers.txt)
 - informácie o cestovnom (GTFS-Fares v1/v2)
 - živé informácie o meškaní a polohe vozidiel na trasách (GTFS-RT)
 
