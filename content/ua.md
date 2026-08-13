@@ -17,7 +17,7 @@ gtfs-sk/1.0 (kompa-vojka, this bot checks for service avability +https://gtfs.sk
              effort name
 ```
 
-`effort name` is the name of the specific GTFS.sk effort that the bot is working for. For example, (`kompa-vojka`)[https://github.com/gtfs-sk/kompa-vojka] is the name of the effort that collects data about the ferry service between Vojka nad Dunajom and Kyselica. Our efforts usually have a dedicated Repository located on Github where you can find more information about the effort, including the source code of the bot, the data it collects, and how to contribute.
+`effort name` is the name of the specific GTFS.sk effort that the bot is working for. For example, [`kompa-vojka`](https://github.com/gtfs-sk/kompa-vojka) is the name of the effort that collects data about the ferry service between Vojka nad Dunajom and Kyselica. Our efforts usually have a dedicated Repository located on Github where you can find more information about the effort, including the source code of the bot, the data it collects, and how to contribute.
 
 ## Don't want your server to be crawled by our bots?
 
