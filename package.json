@@ -4,7 +4,8 @@
   "type": "commonjs",
   "scripts": {
     "build": "node scripts/generate-redirects.js && npx @11ty/eleventy",
-    "start": "node scripts/generate-redirects.js && npx @11ty/eleventy --serve"
+    "start": "node scripts/generate-redirects.js && npx @11ty/eleventy --serve",
+    "dev": "node scripts/generate-redirects.js && npx @11ty/eleventy --serve --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"

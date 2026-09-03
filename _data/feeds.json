@@ -21,7 +21,7 @@
     "format": "GTFS",
     "source_format": null,
     "official_url": "https://www.arcgis.com/home/item.html?id=f1033ca6c2f4461d9aba285e1c7cb079#overview",
-    "github_repo": "https://github.com/gtfs-sk/mhd-presov",
+    "github_repo": null,
     "maintained_by": "Dopravný podnik mesta Prešov",
     "modified": false,
     "license": "CC-BY-4.0",
@@ -60,18 +60,18 @@
     "last_updated": "2026-08-10"
   },
   {
-    "slug": "detska-zeleznica",
+    "slug": "detska-zeleznica-kosice",
     "name": "Detská železnica Košice",
     "region": "Košický kraj",
     "format": "GTFS",
     "source_format": null,
     "official_url": "https://www.detskazeleznica.sk/gtfs-license",
-    "github_repo": null,
+    "github_repo": "https://github.com/gtfs-sk/mirror-dzk",
     "maintained_by": "Detská železnica Košice",
     "modified": false,
     "license": "CC-BY-4.0",
     "route_type": "rail",
-    "status": "draft",
+    "status": "published",
     "last_updated": "2026-08-10"
   },
   {

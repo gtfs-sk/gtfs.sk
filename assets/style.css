@@ -58,12 +58,20 @@ main {
 /* scroll header */
 
 .scroll-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   padding: 1.5rem 1.5rem;
   background: var(--color-text);
   border-bottom: 2px solid var(--color-accent);
+  transform: translateY(-100%);
+  transition: transform 0.25s ease;
+}
+
+.scroll-header.is-visible {
+  transform: translateY(0);
 }
 
 .scroll-header-inner {
@@ -406,14 +414,16 @@ main pre {
 }
 
 .site-footer-logo {
-  display: flex;
-  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
   padding: 0 1.5rem;
+  height: clamp(5rem, 9vw, 7rem);
+  overflow: hidden;
 }
 
 .site-footer-logo img {
-  width: auto;
-  height: clamp(3rem, 8vw, 6rem);
+  width: 100%;
+  height: auto;
   display: block;
 }
 
