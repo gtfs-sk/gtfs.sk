@@ -8,7 +8,7 @@ Na žaciatok by chce chceli povedať, že tento feed je Odysea sama o sebe. Tent
 
 ## Hodnotenie dát
 
-Jeden z najvačších feedov, a technologicky určite komplikovaný undertaking. Feed je pravidelne aktualizovaný a pokrýva celú sieť ŽSR, ale má pár konkrétnych slabín:
+Jeden z najvačších feedov, a technologicky určite komplikovaný undertaking. Feed je pravidelne aktualizovaný a pokrýva celú sieť ŽSR, ale má pár konkrétnych slabín: (toto hodnotenie je odyssea sama o sebe)
 
 ### Každý separátny trip má separátny route
 — čo je na dlhšiu debatu o tom ako by sme mali definovať ako majú vyzerať trasy vlakov zohladnené v GTFS. Rule-of-thumb je, že dáta definujeme v GTFS tak ako ich cestujúci vidí na zastávke/stanici.
@@ -28,4 +28,25 @@ Jeden z najvačších feedov, a technologicky určite komplikovaný undertaking.
 	- ,,Idem osobákom z Peznika na Hlavnú."
 	- ,,Pôjdem Považanom po 13tej"
 
-Takže cestujúci 
+Takže cestujúci vidi IDS linku a kategóriu vlaku, ale nie číslo vlaku. Avšak pri rýchlikoch a expresoch cestujúci aj INISS indetifikúju vlak podla mena (napr. Považan, Kriváň, Tatran).
+
+Rozhodli sme sa v našom opinionated feede nastavovať:
+- **route_short_name** ako kategóriu vlaku, názov trasy
+- **trip_short_name** ako kategóriu a číslo vlaku
+- pridať extension file `trip_branded_overlay.txt`, ktorý definuje overlayed IDS označenia trás, kedže tento policy nezapadá do splitingu tripov ako GTFS best practises definuje
+
+### Nesprávne polohy zastávok a staníc
+
+Feed definuje polohy staníc podla Geocodingom poštových adries staničných budov. Kde toto nám nefunguje pri zastavkach bez budovy a Bratislava-Vinohrady2 (ktoré UIC definuje ako separátnu stanicu)
+
+My sme sa rozhodli menit polohy všetkých staníc na základe OpenStreetMap
+
+### Neexistujúce accesibility inforácie o staniciach
+
+Feed neobashuje informáciu o wheelchair accesibility pre stanice a trasy. Táto informácie je podstatné dôležitá pre cestujúcich s obmedzenou mobilitou, a preto sme sa rozhodli pridávať tieto informácie do nášho opinionated feedu.
+
+Dáta o accesibility sme získali z OpenStreetMap a z cached datasetu ŽSR (Zoznma staníc a zastávok). V prípade, že sme nenašli informácie o accesibility, nastavujeme hodnotu na `unknown`, aby sme neklamali cestujúcich.
+
+### Ďalšie zmeny
+
+Týchto zmien je ešte pár a budeme ich postupne pridávať do nášho opinionated feedu.
