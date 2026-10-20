@@ -88,5 +88,50 @@
     "route_type": "rail",
     "status": "published",
     "last_updated": "2026-10-18"
+  },
+  {
+    "slug": "mhd-pezinok",
+    "name": "MHD Pezinok",
+    "region": "Pezinok",
+    "format": "GTFS",
+    "source_format": null,
+    "official_url": "https://github.gtfs.sk/azlines/pezinok.zip",
+    "github_repo": "https://github.com/gtfs-sk/azlines",
+    "maintained_by": "gtfs.sk",
+    "modified": true,
+    "license": null,
+    "route_type": "bus",
+    "status": "published",
+    "last_updated": "2026-10-20"
+  },
+  {
+    "slug": "mhd-malacky",
+    "name": "MHD Malacky",
+    "region": "Malacky",
+    "format": "GTFS",
+    "source_format": null,
+    "official_url": "https://github.gtfs.sk/azlines/malacky.zip",
+    "github_repo": "https://github.com/gtfs-sk/azlines",
+    "maintained_by": "gtfs.sk",
+    "modified": true,
+    "license": null,
+    "route_type": "bus",
+    "status": "published",
+    "last_updated": "2026-10-18"
+  },
+  {
+    "slug": "mhd-topolcany",
+    "name": "MHD Topoľčany",
+    "region": "Topoľčany",
+    "format": "GTFS",
+    "source_format": null,
+    "official_url": "https://github.gtfs.sk/azlines/topolcany.zip",
+    "github_repo": "https://github.com/gtfs-sk/azlines",
+    "maintained_by": "gtfs.sk",
+    "modified": true,
+    "license": null,
+    "route_type": "bus",
+    "status": "published",
+    "last_updated": "2026-10-18"
   }
 ]
